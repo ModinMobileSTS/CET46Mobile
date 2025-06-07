@@ -47,32 +47,32 @@ public class ImageElements {
     public static void initialize() {
         long startTime = System.currentTimeMillis();
 
-        MOD_BADGE = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/badge.png");
+        MOD_BADGE = ImageMaster.loadImage("CET46Resource/image/badge.png");
         if (ModConfigPanel.darkMode) {
-            WORD_SCREEN_BASE = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/word_screen_base_dark.png");
-            INFO_BUTTON = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/button_dark.png");
-            WORD_BUTTON = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/button_word_dark.png");
-            INFO_TIP = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/info_tip_dark.png");
+            WORD_SCREEN_BASE = ImageMaster.loadImage("CET46Resource/image/ui/word_screen_base_dark.png");
+            INFO_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_dark.png");
+            WORD_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_word_dark.png");
+            INFO_TIP = ImageMaster.loadImage("CET46Resource/image/ui/info_tip_dark.png");
         } else {
-            WORD_SCREEN_BASE = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/word_screen_base.png");
-            INFO_BUTTON = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/button.png");
-            WORD_BUTTON = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/button_word.png");
-            INFO_TIP = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/info_tip.png");
+            WORD_SCREEN_BASE = ImageMaster.loadImage("CET46Resource/image/ui/word_screen_base.png");
+            INFO_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button.png");
+            WORD_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_word.png");
+            INFO_TIP = ImageMaster.loadImage("CET46Resource/image/ui/info_tip.png");
         }
-        WORD_BUTTON_OUTLINE = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/ui/button_word_outline.png");
+        WORD_BUTTON_OUTLINE = ImageMaster.loadImage("CET46Resource/image/ui/button_word_outline.png");
 
-        RELIC_MISSING_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_missing.png");
-        RELIC_CET4_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_cet4.png");
-        RELIC_CET6_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_cet6.png");
-        RELIC_N5_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_n5.png");
-        RELIC_N4_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_n4.png");
-        RELIC_N3_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_n3.png");
-        RELIC_N2_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_n2.png");
-        RELIC_N1_IMG = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_n1.png");
-        RELIC_CET_OUTLINE = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/relics/book_of_cet_outline.png");
+        RELIC_MISSING_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_missing.png");
+        RELIC_CET4_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet4.png");
+        RELIC_CET6_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet6.png");
+        RELIC_N5_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_n5.png");
+        RELIC_N4_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_n4.png");
+        RELIC_N3_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_n3.png");
+        RELIC_N2_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_n2.png");
+        RELIC_N1_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_n1.png");
+        RELIC_CET_OUTLINE = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet_outline.png");
 
-        POWER_CET_32 = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/powers/cet_power_32.png");
-        POWER_CET_84 = AssetLoader.getTexture(CET46Initializer.MOD_ID,"CET46Resource/image/powers/cet_power_84.png");
+        POWER_CET_32 = ImageMaster.loadImage("CET46Resource/image/powers/cet_power_32.png");
+        POWER_CET_84 = ImageMaster.loadImage("CET46Resource/image/powers/cet_power_84.png");
 
         logger.info("Texture load time: {}ms", System.currentTimeMillis() - startTime);
 

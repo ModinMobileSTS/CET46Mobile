@@ -57,8 +57,8 @@ public class CET46Initializer implements
     static {
         // test
         allBooks.put(BookEnum.JLPT, new BookConfig(BookEnum.JLPT,
-                Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5), () -> new TestJLPT()));
-        allBooks.put(BookEnum.CET, new BookConfig(BookEnum.CET, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6), () -> new TestCET()));}
+                Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5), TestJLPT::new));
+        allBooks.put(BookEnum.CET, new BookConfig(BookEnum.CET, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6), TestCET::new));}
     private static void initBooks() {
         CET46Initializer.allBooks.values().forEach(bookConfig -> {
             if (bookConfig.needNotLoad()) {
@@ -109,10 +109,10 @@ public class CET46Initializer implements
             lang = "zhs";
         }
 
-        BaseMod.loadCustomStringsFile(MOD_ID,EventStrings.class, "CET46Resource/localization/events_" + lang + ".json");
-        BaseMod.loadCustomStringsFile(MOD_ID,PowerStrings.class, "CET46Resource/localization/powers_" + lang + ".json");
-        BaseMod.loadCustomStringsFile(MOD_ID,RelicStrings.class, "CET46Resource/localization/relics_" + lang + ".json");
-        BaseMod.loadCustomStringsFile(MOD_ID,UIStrings.class, "CET46Resource/localization/ui_" + lang + ".json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, "CET46Resource/localization/events_" + lang + ".json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, "CET46Resource/localization/powers_" + lang + ".json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, "CET46Resource/localization/relics_" + lang + ".json");
+        BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/localization/ui_" + lang + ".json");
 
         loadVocabulary();
     }
@@ -121,17 +121,16 @@ public class CET46Initializer implements
         long startTime = System.currentTimeMillis();
 
         needLoadBooks.forEach(lexiconEnum -> {
-            BaseMod.loadCustomStringsFile(MOD_ID,UIStrings.class, "CET46Resource/vocabulary/" + lexiconEnum.name() + ".json");
+            BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/" + lexiconEnum.name() + ".json");
         });
         logger.info("Vocabulary load time: {}ms", System.currentTimeMillis() - startTime);
     }
 
     @Override
     public void receivePostInitialize() {
-
         BookConfig.init_map();
-        ((ModConfigPanel) settingsPanel).receivePostInitialize();
-        BaseMod.registerModBadge(MOD_ID,ImageElements.MOD_BADGE,
+        settingsPanel.receivePostInitialize();
+        BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 
        addCustomScreen(new QuizScreen());
@@ -144,5 +143,4 @@ public class CET46Initializer implements
         DevConsole.consoleFont = generator.generateFont(parameter);
         generator.dispose();
     }
-
 }
