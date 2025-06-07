@@ -1607,6 +1607,7 @@ public abstract class AbstractPlayer extends AbstractCreature {
     public void useCard(AbstractCard c, AbstractMonster monster, int energyOnUse) {
         for (AbstractRelic r: this.relics) {
             if (r instanceof QuizRelic && !((QuizRelic) r).quizzed) {
+                logger.info("QuizRelic:未触发，尝试 " + r.name);
                 // 记录状态, 改一下顺序以免诅咒和状态卡未被记录
                 AbstractPlayerPatch.p = this;
                 AbstractPlayerPatch.c = c;
@@ -1617,6 +1618,7 @@ public abstract class AbstractPlayer extends AbstractCreature {
                 return ;
             }
         }
+      logger.info("QuizRelic:已触发打牌 " );
         if (c.type == CardType.ATTACK) {
             this.useFastAttackAnimation();
         }
