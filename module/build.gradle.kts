@@ -7,7 +7,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 26
         versionName = "1.0"
     }
 
@@ -24,7 +24,7 @@ android {
     }
 
     applicationVariants.all {
-        val outputFileName = "template-$versionName.jar"
+        val outputFileName = "CET46-$versionName.jar"
         outputs.all {
             val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
             output.outputFileName = outputFileName
@@ -33,7 +33,11 @@ android {
 }
 
 dependencies {
+    implementation("org.projectlombok:lombok:1.18.34")
+    annotationProcessor("org.projectlombok:lombok:1.18.34")
+
     compileOnly(fileTree("dir" to "libs", "include" to listOf("*.jar")))
     //noinspection GradleDependency
     compileOnly("com.badlogicgames.gdx:gdx:1.9.10")
+
 }

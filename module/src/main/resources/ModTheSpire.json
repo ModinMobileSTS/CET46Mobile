@@ -1,6 +1,6 @@
 {
-  "modId": "template",
-  "modName": "模板 mod",
+  "modId": "CET46Initializer",
+  "modName": "四六级",
   "modVersion": "1.0",
   "descriptions": {
     "zhs": ["template mod"]
