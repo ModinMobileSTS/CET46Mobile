@@ -1634,7 +1634,6 @@ public abstract class AbstractPlayer extends AbstractCreature {
         for (AbstractRelic r: this.relics) {
             if (r instanceof QuizRelic) {
                 ((QuizRelic) r).changeCardPrePlay(c);
-                return;
             }
         }
         c.use(this, monster);
