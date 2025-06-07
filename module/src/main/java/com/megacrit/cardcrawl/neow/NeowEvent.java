@@ -5,7 +5,7 @@
 
 package com.megacrit.cardcrawl.neow;
 
-import cET46Initializer.events.CallOfCETRoom;
+import CET46InSpire.events.CallOfCETRoom;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.blights.AbstractBlight;

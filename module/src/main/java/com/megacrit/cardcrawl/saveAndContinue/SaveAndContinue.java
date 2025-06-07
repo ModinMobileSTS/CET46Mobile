@@ -5,8 +5,8 @@
 
 package com.megacrit.cardcrawl.saveAndContinue;
 
-import cET46Initializer.savedata.CET46SaveData;
-import cET46Initializer.savedata.SaveData;
+import CET46InSpire.savedata.CET46SaveData;
+import CET46InSpire.savedata.SaveData;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.google.gson.Gson;

@@ -5,7 +5,7 @@
 
 package com.megacrit.cardcrawl.helpers;
 
-import cET46Initializer.helpers.CNFontHelper;
+import CET46InSpire.helpers.CNFontHelper;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;

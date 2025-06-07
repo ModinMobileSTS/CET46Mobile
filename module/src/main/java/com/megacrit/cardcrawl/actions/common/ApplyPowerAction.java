@@ -7,8 +7,6 @@ package com.megacrit.cardcrawl.actions.common;
 
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
@@ -29,7 +27,7 @@ import com.megacrit.cardcrawl.vfx.combat.PowerBuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.PowerDebuffEffect;
 import java.util.Collections;
 
-import static cET46Initializer.patches.STSActionPatches.underPackage;
+import static CET46InSpire.patches.STSActionPatches.underPackage;
 
 public class ApplyPowerAction extends AbstractGameAction {
     private static final UIStrings uiStrings;

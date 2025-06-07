@@ -5,8 +5,8 @@
 
 package com.megacrit.cardcrawl.characters;
 
-import cET46Initializer.patches.AbstractPlayerPatch;
-import cET46Initializer.relics.QuizRelic;
+import CET46InSpire.patches.AbstractPlayerPatch;
+import CET46InSpire.relics.QuizRelic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;

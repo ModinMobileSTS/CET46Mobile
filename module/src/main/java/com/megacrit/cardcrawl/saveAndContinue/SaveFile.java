@@ -5,9 +5,8 @@
 
 package com.megacrit.cardcrawl.saveAndContinue;
 
-import cET46Initializer.relics.QuizRelic;
-import cET46Initializer.savedata.SaveData;
-import com.google.gson.JsonElement;
+import CET46InSpire.relics.QuizRelic;
+import CET46InSpire.savedata.SaveData;
 import com.google.gson.annotations.SerializedName;
 import com.megacrit.cardcrawl.android.SpireAndroidLogger;
 import com.megacrit.cardcrawl.android.mods.BaseMod;

@@ -1,8 +1,7 @@
 package com.megacrit.cardcrawl.dungeons;
 
-import cET46Initializer.relics.QuizRelic;
-import cET46Initializer.savedata.SaveData;
-import cET46Initializer.screens.QuizScreen;
+import CET46InSpire.relics.QuizRelic;
+import CET46InSpire.savedata.SaveData;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
